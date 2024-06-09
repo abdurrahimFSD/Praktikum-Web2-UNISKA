@@ -12,7 +12,7 @@
                     <h2 class="text-dark">Tentang Saya</h2>
                     <hr>
                     <div class="row">
-                        <div class="col-9 mb-4">
+                        <div class="col-lg-9 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -42,13 +42,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3 mb-4">
+                        <div class="col-lg-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
+                                <div class="card-body d-flex justify-content-center align-items-center">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                <img src="../assets/img/logo-uniska.png" width="100%" alt="">
+                                                <img src="../assets/img/logo-uniska.png" width="100%" alt="uniska">
                                             </div>
                                         </div>
                                     </div>
