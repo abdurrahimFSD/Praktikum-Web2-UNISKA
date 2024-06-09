@@ -14,7 +14,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="../pages/beranda.php">
                 <i class="fa-solid fa-house"></i>
                 <span>Beranda</span></a>
@@ -25,20 +25,20 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                Aksi
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseComponents"
                     aria-expanded="true" aria-controls="collapseComponents">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <i class="fa-solid fa-database"></i>
+                    <span>Master Data</span>
                 </a>
                 <div id="collapseComponents" class="collapse" aria-labelledby="headingComponents" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <h6 class="collapse-header">Master Data:</h6>
+                        <a class="collapse-item" href="../pages/karyawan_data.php">Data Karyawan</a>
                         <a class="collapse-item" href="cards.html">Cards</a>
                     </div>
                 </div>

@@ -73,6 +73,10 @@ body {
   outline: 0 !important;
 }
 
+.nav-item span {
+    margin-left: 7px;
+}
+
 hr {
   box-sizing: content-box;
   height: 0;

@@ -8,6 +8,8 @@
     <!-- Custom styles -->
     <link rel="stylesheet" href="../assets/css/style.min.css">
 
+    <link rel="stylesheet" href="../assets/css/style.css">
+
     <!-- FontAwesome -->
     <link rel="stylesheet" href="../vendor/fontawesome-free/css/all.min.css">
 
