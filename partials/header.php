@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Praktikum Pemrograman Web 2</title>
 
     <!-- Custom styles -->
     <link rel="stylesheet" href="../assets/css/style.min.css">

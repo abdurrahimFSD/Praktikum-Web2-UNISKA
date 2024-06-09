@@ -15,9 +15,9 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="#">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
+                <a class="nav-link" href="../pages/beranda.php">
+                <i class="fa-solid fa-house"></i>
+                <span>Beranda</span></a>
             </li>
 
             <!-- Divider -->
