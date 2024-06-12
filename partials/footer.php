@@ -27,6 +27,11 @@
     <!-- Custom scripts for all pages-->
     <script src="../assets/js/script.min.js"></script>
 
+    <!-- JS DataTables -->
+    <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.min.css"></script>
+    <script src="../assets/js/demo/datatables.js"></script>
+    
     <!-- Page level plugins -->
     <script src="../vendor/chart.js/Chart.min.js"></script>
 
