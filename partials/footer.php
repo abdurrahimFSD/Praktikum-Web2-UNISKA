@@ -29,7 +29,7 @@
 
     <!-- JS DataTables -->
     <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="../vendor/datatables/dataTables.bootstrap4.min.css"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="../assets/js/demo/datatables.js"></script>
     
     <!-- Page level plugins -->
