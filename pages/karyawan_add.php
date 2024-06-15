@@ -53,6 +53,12 @@
                                         <input type="text" class="form-control" id="tempatLahir" name="tempatLahir" placeholder="Masukkan Tempat Lahir" required>
                                     </div>
                                 </div>
+                                <div class="mb-3 row">
+                                    <label for="tanggalLahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                                    <div class="col-sm-10">
+                                        <input type="date" class="form-control" id="tanggalLahir" name="tanggalLahir" placeholder="Masukkan Tanggal Lahir" required>
+                                    </div>
+                                </div>
                                 
                             </form>
                         </div>
