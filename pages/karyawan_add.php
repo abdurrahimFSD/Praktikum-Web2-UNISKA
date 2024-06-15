@@ -41,6 +41,12 @@
                                         <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" maxlength="16" required>
                                     </div>
                                 </div>
+                                <div class="mb-3 row">
+                                    <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" required>
+                                    </div>
+                                </div>
                                 
                             </form>
                         </div>
