@@ -10,13 +10,12 @@
                 <div class="container-fluid">
                     <h2 class="text-dark">Data Karyawan</h2>
                     <hr>
-                    <a href="#" class="btn btn-success mb-3">
-                        <i class="fa-solid fa-plus mr-1"></i> Create Data
-                    </a>
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Data Karyawan</h6>
+                            <a href="#" class="btn btn-success ">
+                                <i class="fa-solid fa-plus mr-1"></i> Create Data
+                            </a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
