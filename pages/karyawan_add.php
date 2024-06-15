@@ -83,6 +83,17 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="mb-3 row">
+                                    <label for="status" class="col-sm-2 col-form-label">Status</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-select form-control" id="status" aria-label="Default select example">
+                                            <option selected>Pilih Status</option>
+                                            <option value="Outsourcing">Outsourcing</option>
+                                            <option value="Kontrak">Kontrak</option>
+                                            <option value="Tetap">Tetap</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 
                             </form>
                         </div>
