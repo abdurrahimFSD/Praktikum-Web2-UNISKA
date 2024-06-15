@@ -59,6 +59,12 @@
                                         <input type="date" class="form-control" id="tanggalLahir" name="tanggalLahir" placeholder="Masukkan Tanggal Lahir" required>
                                     </div>
                                 </div>
+                                <div class="mb-3 row">
+                                    <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat"></textarea>
+                                    </div>
+                                </div>
                                 
                             </form>
                         </div>
