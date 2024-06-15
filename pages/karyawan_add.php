@@ -65,6 +65,12 @@
                                         <textarea class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat"></textarea>
                                     </div>
                                 </div>
+                                <div class="mb-3 row">
+                                    <label for="noTelepon" class="col-sm-2 col-form-label">No Telepon</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="noTelepon" name="noTelepon" placeholder="Masukkan No Telepon" maxlength="13" required>
+                                    </div>
+                                </div>
                                 
                             </form>
                         </div>
