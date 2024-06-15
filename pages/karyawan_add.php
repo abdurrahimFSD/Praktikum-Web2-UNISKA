@@ -100,6 +100,9 @@
                                         <button type="submit" class="btn btn-primary" name="tambahKaryawan">
                                             Tambah Karyawan
                                         </button>
+                                        <button type="reset" class="btn btn-warning">
+                                            Reset
+                                        </button>
                                     </div>
                                 </div>
                                 
