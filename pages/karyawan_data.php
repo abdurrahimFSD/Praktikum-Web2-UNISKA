@@ -6,17 +6,29 @@
             <div id="main-content">
                 <?php include('../partials/topbar.php') ?>
 
+                <div class="col-12 mb-4 px-0">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-auto">
+                                    <h4 class="page-header-title mb-0 text-dark">
+                                        Data Karyawan
+                                    </h4>
+                                </div>
+                                <div class="col-12 col-xl-auto">
+                                    <a class="btn btn-light text-primary" href="./karyawan_add.php">
+                                        <i class="fa-solid fa-user-plus"></i> Create Data
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h2 class="text-dark">Data Karyawan</h2>
-                    <hr>
 
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <a href="./karyawan_add.php" class="btn btn-success ">
-                                <i class="fa-solid fa-plus mr-1"></i> Create Data
-                            </a>
-                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
