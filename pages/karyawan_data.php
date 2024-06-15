@@ -17,7 +17,7 @@
                                 </div>
                                 <div class="col-12 col-xl-auto">
                                     <a class="btn btn-light text-primary" href="./karyawan_add.php">
-                                        <i class="fa-solid fa-user-plus"></i> Create Data
+                                        <i class="fa-solid fa-user-plus"></i> Tambah Karyawan Baru
                                     </a>
                                 </div>
                             </div>
