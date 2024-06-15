@@ -27,6 +27,17 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+
+                    <!-- Form card -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Detail Karyawan</h6>
+                        </div>
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                    <!-- End Form card -->
                     
                 </div>
                 <!-- End Page Content -->
