@@ -38,25 +38,25 @@
                             <div class="mb-3 row">
                                     <label for="nik" class="col-sm-2 col-form-label">NIK</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" maxlength="16" required readonly>
+                                        <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" maxlength="16" value="" required readonly>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" required>
+                                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" value="" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="tempatLahir" class="col-sm-2 col-form-label">Tempat Lahir</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="tempatLahir" name="tempatLahir" placeholder="Masukkan Tempat Lahir" required>
+                                        <input type="text" class="form-control" id="tempatLahir" name="tempatLahir" placeholder="Masukkan Tempat Lahir" value="" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="tanggalLahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                                     <div class="col-sm-10">
-                                        <input type="date" class="form-control" id="tanggalLahir" name="tanggalLahir" placeholder="Masukkan Tanggal Lahir" required>
+                                        <input type="date" class="form-control" id="tanggalLahir" name="tanggalLahir" placeholder="Masukkan Tanggal Lahir" value="" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
@@ -68,7 +68,7 @@
                                 <div class="mb-3 row">
                                     <label for="noTelepon" class="col-sm-2 col-form-label">No Telepon</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="noTelepon" name="noTelepon" placeholder="Masukkan No Telepon" maxlength="13" required>
+                                        <input type="text" class="form-control" id="noTelepon" name="noTelepon" placeholder="Masukkan No Telepon" maxlength="13" value="" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
