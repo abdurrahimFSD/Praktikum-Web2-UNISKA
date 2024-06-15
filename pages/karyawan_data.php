@@ -12,7 +12,7 @@
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-auto">
                                     <h4 class="page-header-title mb-0 text-dark">
-                                        Data Karyawan
+                                        <i class="fa-regular fa-user mr-2"></i> Data Karyawan
                                     </h4>
                                 </div>
                                 <div class="col-12 col-xl-auto">
