@@ -97,9 +97,9 @@
                                 <div class="mb-3 row">
                                     <label class="col-sm-2 col-form-label">&nbsp;</label>
                                     <div class="col-sm-10">
-                                        <a href="#" class="btn btn-primary btn-icon-split">
-                                            <span class="text">Tambah Karyawan</span>
-                                        </a>
+                                        <button type="submit" class="btn btn-primary" name="tambahKaryawan">
+                                            Tambah Karyawan
+                                        </button>
                                     </div>
                                 </div>
                                 
