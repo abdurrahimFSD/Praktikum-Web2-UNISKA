@@ -72,18 +72,6 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="jabatan" class="col-sm-2 col-form-label">No Telepon</label>
-                                    <div class="col-sm-10">
-                                        <select class="form-select form-control" aria-label="Default select example">
-                                            <option selected>Pilih Jabatan</option>
-                                            <option value="Operator">Operator</option>
-                                            <option value="Leader">Leader</option>
-                                            <option value="Supervisor">Supervisor</option>
-                                            <option value="Manage">Manager</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="mb-3 row">
                                     <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
                                     <div class="col-sm-10">
                                         <select class="form-select form-control" id="jabatan" aria-label="Default select example">
