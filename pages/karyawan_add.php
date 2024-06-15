@@ -47,6 +47,12 @@
                                         <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" required>
                                     </div>
                                 </div>
+                                <div class="mb-3 row">
+                                    <label for="tempatLahir" class="col-sm-2 col-form-label">Tempat Lahir</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="tempatLahir" name="tempatLahir" placeholder="Masukkan Tempat Lahir" required>
+                                    </div>
+                                </div>
                                 
                             </form>
                         </div>
