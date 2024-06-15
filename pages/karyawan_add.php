@@ -6,10 +6,28 @@
             <div id="main-content">
                 <?php include('../partials/topbar.php') ?>
 
+                <div class="col-12 mb-4 px-0">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-auto">
+                                    <h4 class="page-header-title mb-0 text-dark">
+                                        <i class="fa-solid fa-user-plus mr-2"></i> Tambah Karyawan
+                                    </h4>
+                                </div>
+                                <div class="col-12 col-xl-auto">
+                                    <a class="btn btn-light text-primary" href="./karyawan_data.php">
+                                        <i class="fa-solid fa-arrow-left"></i> Kembali Ke Data Karyawan
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    
 
                 </div>
                 <!-- End Page Content -->
