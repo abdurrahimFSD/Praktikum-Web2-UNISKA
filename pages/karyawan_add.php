@@ -34,7 +34,15 @@
                             <h6 class="m-0 font-weight-bold text-primary">Detail Karyawan</h6>
                         </div>
                         <div class="card-body">
-                            
+                            <form action="" method="post">
+                                <div class="mb-3 row">
+                                    <label for="nik" class="col-sm-2 col-form-label">NIK</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK">
+                                    </div>
+                                </div>
+                                
+                            </form>
                         </div>
                     </div>
                     <!-- End Form -->
