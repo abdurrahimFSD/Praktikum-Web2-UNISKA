@@ -26,7 +26,10 @@
                 </div>
 
                 <!-- include alert_modal -->
-                <?php include '../includes/alert_modal.php'; ?>
+                <?php 
+                session_start();
+                include '../includes/alert_modal.php';
+                ?>
                 <!-- END include alert_modal -->
                 
                 <!-- Begin Page Content -->
