@@ -28,7 +28,7 @@ class KaryawanController {
 
         // Cek apakah query berhasil di jalankan
         if($resultAddKaryawan) {
-            // Jika berhasil, redirect ke halaman karyawan_data.php
+            // Jika berhasil, redirect ke halaman karyawan_add.php
             $_SESSION['doneTambahKaryawan'] = true;
             header("location: ../pages/karyawan_add.php");
             exit;
