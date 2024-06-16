@@ -26,6 +26,10 @@ include '../includes/library.php';
     <!-- CSS DataTables -->
     <link rel="stylesheet" href="../vendor/datatables/dataTables.bootstrap4.min.css">
 
+    <!-- SweetAlert -->
+    <link rel="stylesheet" href="../vendor/sweetalert/sweetalert2.min.css">
+    <script src="../vendor/sweetalert/sweetalert2.all.min.js"></script>
+
 </head>
 <body>
     <!-- Page Wrapper -->
