@@ -14,4 +14,16 @@ class KaryawanController {
 
 $karyawanController = new KaryawanController();
 
+// Tambah Karyawan
+if(isset($_POST['tambahKaryawan'])) {
+    $nik = $_POST['nik'];
+    $nama = $_POST['nama'];
+    $tempatLahir = $_POST['tempatLahir'];
+    $tanggalLahir = $_POST['tanggalLahir'];
+    $alamat = $_POST['alamat'];
+    $noTelepon = $_POST['noTelepon'];
+    $jabatan = $_POST['jabatan'];
+    $status = $_POST['status'];
+}
+// END Tambah Karyawan
 ?>
