@@ -24,6 +24,9 @@ if(isset($_POST['tambahKaryawan'])) {
     $noTelepon = $_POST['noTelepon'];
     $jabatan = $_POST['jabatan'];
     $status = $_POST['status'];
+
+    // Memanggil function tambahKaryawan dengan data dari form
+    $karyawanController->tambahKaryawan($nik, $nama, $tempatLahir, $tanggalLahir, $alamat, $noTelepon, $jabatan, $status);
 }
 // END Tambah Karyawan
 ?>
