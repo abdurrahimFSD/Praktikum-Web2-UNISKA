@@ -12,6 +12,6 @@ class KaryawanController {
 
 }
 
-
+$karyawanController = new KaryawanController();
 
 ?>
