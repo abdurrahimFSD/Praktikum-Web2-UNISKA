@@ -20,6 +20,19 @@ class KaryawanController {
             header("location: ../pages/karyawan_add.php");
             exit;
         }
+
+        // Query untuk menambahkan dataKaryawan ke database
+        $queryAddKaryawan = "INSERT INTO karyawan (nik, nama, tempat_lahir, tanggal_lahir, alamat, no_telepon, jabatan, status) VALUES ('$nik', '$nama', '$tempatLahir', '$tanggalLahir', '$alamat', '$noTelepon', '$jabatan', '$status')";
+        // Eksekusi query
+        $resultAddKaryawan = mysqli_query($connection, $queryAddKaryawan);
+
+        // Cek apakah query berhasil di jalankan
+        if($resultAddKaryawan) {
+            // Jika berhasil, redirect ke halaman karyawan_data.php
+            $_SESSION['doneTambahKaryawan'] = true;
+            header("location: ../pages/karyawan_data.php");
+            exit;
+        }
     }
     // END Tambah Karyawan 
 
