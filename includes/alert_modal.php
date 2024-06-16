@@ -20,3 +20,25 @@
     }
 ?>
 <!-- END nikSudahAda -->
+
+
+<!-- doneTambahKaryawan -->
+<?php
+    if(isset($_SESSION['doneTambahKaryawan'])) {
+?>
+        <script>
+            Swal.fire({
+                title: "Success",
+                text: "Employee data added successfully",
+                icon: "success"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '../pages/karyawan_data.php';
+                }
+            });
+        </script>
+<?php
+        unset($_SESSION['doneTambahKaryawan']);
+    }
+?>
+<!-- END doneTambahKaryawan -->
