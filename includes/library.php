@@ -13,4 +13,7 @@ function formatAngka($angka) {
     return $hasil;
 }
 
+$now = strtotime(date("Y-m-d"));
+$maxYear = date('Y-m-d', strtotime('- 16 year', $now));
+$minYear = date('Y-m-d', strtotime('- 50 year', $now));
 ?>
