@@ -12,9 +12,9 @@ class KaryawanController {
 
         // Cek apakah NIK sudah ada
         $queryCekNik = "SELECT * FROM karyawan WHERE nik = '$nik'";
-        $sqlCekNik = mysqli_query($connection, $queryCekNik);
+        $resultCekNik = mysqli_query($connection, $queryCekNik);
 
-        if(mysqli_num_rows($sqlCekNik) > 0) {
+        if(mysqli_num_rows($resultCekNik) > 0) {
             // Jika NIK sudah ada maka redirect ke halaman karyawan_add.php 
             $_SESSION['nikSudahAda'] = $nik;
             header("location: ../pages/karyawan_add.php");
