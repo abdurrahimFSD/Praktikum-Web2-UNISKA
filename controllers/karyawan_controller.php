@@ -2,6 +2,7 @@
 
 include '../includes/connection.php';
 include '../includes/library.php';
+session_start();
 
 class KaryawanController {
     // Tambah Karyawan
@@ -12,7 +13,13 @@ class KaryawanController {
         // Cek apakah NIK sudah ada
         $queryCekNik = "SELECT * FROM karyawan WHERE nik = '$nik'";
         $sqlCekNik = mysqli_query($connection, $queryCekNik);
-        
+
+        if(mysqli_num_rows($sqlCekNik) > 0) {
+            // Jika NIK sudah ada maka redirect ke halaman karyawan_add.php 
+            $_SESSION['nikSudahAda'] = $nik;
+            header("location: ../pages/karyawan_add.php");
+            exit;
+        }
     }
     // END Tambah Karyawan 
 
