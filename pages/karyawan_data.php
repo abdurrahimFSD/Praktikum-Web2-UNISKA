@@ -47,16 +47,22 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php
+                                        $queryReadKaryawan = "SELECT * FROM karyawan";
+                                        $sqlReadKaryawan = mysqli_query($connection, $queryReadKaryawan) or die ("Query salah : " . mysqli_error($connection));
+                                        $no = 1;
+                                        while($kolomData = mysqli_fetch_assoc($sqlReadKaryawan)) {
+                                        ?>
                                         <tr>
-                                            <td>1</td>
-                                            <td>11001</td>
-                                            <td>Haaland</td>
-                                            <td>Norway</td>
-                                            <td>2011/04/25</td>
-                                            <td>Norway City</td>
-                                            <td>081347200001</td>
-                                            <td>Manajer</td>
-                                            <td>Tetap</td>
+                                            <td><?= $no++; ?></td>
+                                            <td><?= $kolomData['nik']; ?></td>
+                                            <td><?= $kolomData['nama']; ?></td>
+                                            <td><?= $kolomData['tempat_lahir']; ?></td>
+                                            <td><?= indonesiaTgl($kolomData['tanggal_lahir']); ?></td>
+                                            <td><?= $kolomData['alamat']; ?></td>
+                                            <td><?= $kolomData['no_telepon']; ?></td>
+                                            <td><?= $kolomData['jabatan']; ?></td>
+                                            <td><?= $kolomData['status']; ?></td>
                                             <td class="d-flex justify-content-around">
                                                 <a href="./karyawan_edit.php" title="Update Data">
                                                     <i class="fa-solid fa-pen-to-square"></i>
@@ -66,6 +72,9 @@
                                                 </a>
                                             </td>
                                         </tr>
+                                        <?php
+                                        }
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
