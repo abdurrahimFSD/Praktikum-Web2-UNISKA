@@ -68,7 +68,7 @@
                                             <td><?= $kolomData['jabatan']; ?></td>
                                             <td><?= $kolomData['status']; ?></td>
                                             <td class="d-flex justify-content-around">
-                                                <a href="./karyawan_edit.php" title="Update Data">
+                                                <a href="./karyawan_edit.php?nik=<?= $kolomData['nik']; ?>" title="Update Data">
                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                 </a>
                                                 <a href="" title="Delete Data">
