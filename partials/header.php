@@ -1,6 +1,7 @@
 <?php
 include '../includes/connection.php';
 include '../includes/library.php';
+session_start();
 ?>
 
 <!DOCTYPE html>

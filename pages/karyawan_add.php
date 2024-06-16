@@ -27,7 +27,6 @@
 
                 <!-- include alert_modal -->
                 <?php 
-                session_start();
                 include '../includes/alert_modal.php';
                 ?>
                 <!-- END include alert_modal -->
