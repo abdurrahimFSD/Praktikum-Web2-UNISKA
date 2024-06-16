@@ -6,6 +6,12 @@ include '../includes/library.php';
 class KaryawanController {
     // Tambah Karyawan
     public function tambahKaryawan($nik, $nama, $tempatLahir, $tanggalLahir, $alamat, $noTelepon, $jabatan, $status) {
+        // Mengakses koneksi database yang telah dibuat di file connection.php
+        global $connection;
+
+        // Cek apakah NIK sudah ada
+        $queryCekNik = "SELECT * FROM karyawan WHERE nik = '$nik'";
+        $sqlCekNik = mysqli_query($connection, $queryCekNik);
         
     }
     // END Tambah Karyawan 
