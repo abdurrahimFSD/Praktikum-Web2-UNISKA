@@ -16,7 +16,7 @@
                                     </h4>
                                 </div>
                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0 d-flex justify-content-end">
-                                    <a class="btn btn-light text-primary" onclick="window.print();">
+                                    <a class="btn btn-light text-primary" onclick="printTable()">
                                         <i class="fa-solid fa-print"></i> Cetak Data Karyawan
                                     </a>
                                 </div>
@@ -65,6 +65,27 @@
                 
                 </div>
                 <!-- End Page Content -->
+
+                <script>
+                function printTable() {
+                    var tableContent = document.getElementById('dataTable').outerHTML;
+                    var printWindow = window.open('', '', 'height=842,width=595'); // Ukuran A4 dalam piksel: 595x842 untuk portrait, 842x595 untuk landscape
+                    printWindow.document.write('<style>');
+                    printWindow.document.write('@media print {');
+                    printWindow.document.write('@page { size: A4; margin: 20mm; }');
+                    printWindow.document.write('body { -webkit-print-color-adjust: exact; text-align: center; }'); // Menjaga warna dan teks di tengah
+                    printWindow.document.write('.print-title { font-size: 24px; font-weight: bold; margin-bottom: 20px; text-align: center; }'); // Gaya untuk judul
+                    printWindow.document.write('}');
+                    printWindow.document.write('</style>');
+                    printWindow.document.write('<link rel="stylesheet" href="../assets/css/style.min.css">'); // Sesuaikan path ke file CSS
+                    printWindow.document.write('</head><body>');
+                    printWindow.document.write('<div class="print-title">Laporan Data Karyawan</div>');
+                    printWindow.document.write(tableContent);
+                    printWindow.document.write('</body></html>');
+                    printWindow.document.close();
+                    printWindow.print();
+                }
+                </script>
             
             </div>
             <!-- Main Content END -->
