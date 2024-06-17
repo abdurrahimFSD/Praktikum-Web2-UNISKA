@@ -54,6 +54,13 @@ class KaryawanController {
     }
     // END Hapus Karyawan
 
+
+    // Edit Karyawan
+    public function editKaryawan($nik, $nama, $tempatLahir, $tanggalLahir, $alamat, $noTelepon, $jabatan, $status) {
+
+    }
+    // END Edit Karyawan
+
 }
 
 $karyawanController = new KaryawanController();
@@ -83,4 +90,21 @@ if (isset($_GET['nik'])) {
     $karyawanController->hapusKaryawan($nik);
 }
 // END Hapus Karyawan
+
+
+// Edit Karyawan
+if(isset($_POST['editKaryawan'])) {
+    $nik = $_POST['nik'];
+    $nama = $_POST['nama'];
+    $tempatLahir = $_POST['tempatLahir'];
+    $tanggalLahir = $_POST['tanggalLahir'];
+    $alamat = $_POST['alamat'];
+    $noTelepon = $_POST['noTelepon'];
+    $jabatan = $_POST['jabatan'];
+    $status = $_POST['status'];
+
+    // Memanggil function editKaryawan dengan data dari form
+    $karyawanController->editKaryawan($nik, $nama, $tempatLahir, $tanggalLahir, $alamat, $noTelepon, $jabatan, $status);
+}
+// END Edit Karyawan
 ?>
