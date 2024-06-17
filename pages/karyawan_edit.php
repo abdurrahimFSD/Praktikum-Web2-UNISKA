@@ -60,40 +60,40 @@
                         </div>
                         <div class="card-body">
                             <form action="" method="post">
-                            <div class="mb-3 row">
+                                <div class="mb-3 row">
                                     <label for="nik" class="col-sm-2 col-form-label">NIK</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" maxlength="16" value="" required readonly>
+                                        <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" maxlength="16" value="<?= $nik; ?>" required readonly>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" value="" required>
+                                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" value="<?= $nama; ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="tempatLahir" class="col-sm-2 col-form-label">Tempat Lahir</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="tempatLahir" name="tempatLahir" placeholder="Masukkan Tempat Lahir" value="" required>
+                                        <input type="text" class="form-control" id="tempatLahir" name="tempatLahir" placeholder="Masukkan Tempat Lahir" value="<?= $tempatLahir; ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="tanggalLahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                                     <div class="col-sm-10">
-                                        <input type="date" class="form-control" id="tanggalLahir" name="tanggalLahir" placeholder="Masukkan Tanggal Lahir" value="" required>
+                                        <input type="date" class="form-control" id="tanggalLahir" name="tanggalLahir" placeholder="Masukkan Tanggal Lahir" value="<?= $tanggalLahir; ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat"></textarea>
+                                        <textarea class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat"><?= $alamat; ?></textarea>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="noTelepon" class="col-sm-2 col-form-label">No Telepon</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="noTelepon" name="noTelepon" placeholder="Masukkan No Telepon" maxlength="13" value="" required>
+                                        <input type="text" class="form-control" id="noTelepon" name="noTelepon" placeholder="Masukkan No Telepon" maxlength="13" value="<?= $noTelepon; ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
@@ -101,10 +101,10 @@
                                     <div class="col-sm-10">
                                         <select class="form-select form-control" id="jabatan" aria-label="Default select example">
                                             <option selected>Pilih Jabatan</option>
-                                            <option value="Operator">Operator</option>
-                                            <option value="Leader">Leader</option>
-                                            <option value="Supervisor">Supervisor</option>
-                                            <option value="Manage">Manager</option>
+                                            <option value="Operator" <?= ($jabatan == 'Operator') ? 'selected' : '' ?> >Operator</option>
+                                            <option value="Leader" <?= ($jabatan == 'Leader') ? 'selected' : '' ?> >Leader</option>
+                                            <option value="Supervisor" <?= ($jabatan == 'Supervisor') ? 'selected' : '' ?> >Supervisor</option>
+                                            <option value="Manager" <?= ($jabatan == 'Manager') ? 'selected' : '' ?> >Manager</option>
                                         </select>
                                     </div>
                                 </div>
@@ -113,9 +113,9 @@
                                     <div class="col-sm-10">
                                         <select class="form-select form-control" id="status" aria-label="Default select example">
                                             <option selected>Pilih Status</option>
-                                            <option value="Outsourcing">Outsourcing</option>
-                                            <option value="Kontrak">Kontrak</option>
-                                            <option value="Tetap">Tetap</option>
+                                            <option value="Outsourcing" <?= ($status == 'Outsourcing') ? 'selected' : '' ?> >Outsourcing</option>
+                                            <option value="Kontrak" <?= ($status == 'Kontrak') ? 'selected' : '' ?> >Kontrak</option>
+                                            <option value="Tetap" <?= ($status == 'Tetap') ? 'selected' : '' ?> >Tetap</option>
                                         </select>
                                     </div>
                                 </div>
