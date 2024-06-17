@@ -87,3 +87,25 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <!-- END doneDeleteKaryawan -->
+
+
+<!-- doneEditKaryawan -->
+<?php
+    if(isset($_SESSION['doneEditKaryawan'])) {
+?>
+        <script>
+            Swal.fire({
+                title: "Success",
+                text: "Employee data updated successfully",
+                icon: "success"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '../pages/karyawan_data.php';
+                }
+            });
+        </script>
+<?php
+        unset($_SESSION['doneEditKaryawan']);
+    }
+?>
+<!-- END doneEditKaryawan -->
