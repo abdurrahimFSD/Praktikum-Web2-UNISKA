@@ -57,7 +57,20 @@ class KaryawanController {
 
     // Edit Karyawan
     public function editKaryawan($nik, $nama, $tempatLahir, $tanggalLahir, $alamat, $noTelepon, $jabatan, $status) {
+        // Mengakses koneksi database yang telah dibuat di file connection.php
+        global $connection;
 
+        // Query untuk mengedit data karyawan berdasarkan NIk
+        $queryEditKaryawan = "UPDATE karyawan SET nama='$nama', tempat_lahir ='$tempatLahir', tanggal_lahir='$tanggalLahir', alamat='$alamat', no_telepon='$noTelepon', jabatan='$jabatan', status='$status' WHERE nik ='$nik'";
+        $resultEditKaryawan = mysqli_query($connection, $queryEditKaryawan);
+
+        // Cek apakh query berhasil di jalankan
+        if($resultEditKaryawan) {
+            // Buat session doneEditKaryawan
+            $_SESSION['doneEditKaryawan'] = true;
+            header("location: ../pages/karyawan_add.php");
+            exit;
+        }
     }
     // END Edit Karyawan
 
