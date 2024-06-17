@@ -25,6 +25,31 @@
                     </div>
                 </div>
 
+                <?php
+                // Update
+                if(isset($_GET['nik'])) {
+                    global $connection;
+
+                    $nik = $_GET['nik'];
+
+                    // Query select karyawan berdasarkan nik
+                    $querySelectKaryawan = "SELECT * FROM karyawan WHERE nik = '$nik'";
+                    $resultSelectKaryawan = mysqli_query($connection, $querySelectKaryawan);
+
+                    $kolomData = mysqli_fetch_assoc($resultSelectKaryawan);
+
+                    $nik = $kolomData['nik'];
+                    $nama = $kolomData['nama'];
+                    $tempatLahir = $kolomData['tempat_lahir'];
+                    $tanggalLahir = $kolomData['tanggal_lahir'];
+                    $alamat = $kolomData['alamat'];
+                    $noTelepon = $kolomData['no_telepon'];
+                    $jabatan = $kolomData['jabatan'];
+                    $status = $kolomData['status'];
+                }
+                // Update
+                ?>
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
