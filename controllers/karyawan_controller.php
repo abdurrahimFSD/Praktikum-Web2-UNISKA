@@ -39,7 +39,18 @@ class KaryawanController {
 
     // Hapus Karyawan
     public function hapusKaryawan($nik) {
-        
+        global $connection;
+
+        // Query untuk menghapus dataKaryawan berdasarkan nik
+        $queryDeleteKaryawan = "DELETE FROM karyawan WHERE nik = '$nik'";
+        $resultDeleteKaryawan = mysqli_query($connection, $queryDeleteKaryawan);
+
+        // Cek apakah query berhasil di jalankan
+        if($resultDeleteKaryawan) {
+            $_SESSION['doneDeleteKaryawan'] = true;
+            header("location: ../pages/karyawan_data.php");
+            exit;
+        }
     }
     // END Hapus Karyawan
 
