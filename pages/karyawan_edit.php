@@ -99,7 +99,7 @@
                                 <div class="mb-3 row">
                                     <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
                                     <div class="col-sm-10">
-                                        <select class="form-select form-control" id="jabatan" aria-label="Default select example">
+                                        <select class="form-select form-control" id="jabatan" name="jabatan" aria-label="Default select example">
                                             <option selected>Pilih Jabatan</option>
                                             <option value="Operator" <?= ($jabatan == 'Operator') ? 'selected' : '' ?> >Operator</option>
                                             <option value="Leader" <?= ($jabatan == 'Leader') ? 'selected' : '' ?> >Leader</option>
@@ -111,7 +111,7 @@
                                 <div class="mb-3 row">
                                     <label for="status" class="col-sm-2 col-form-label">Status</label>
                                     <div class="col-sm-10">
-                                        <select class="form-select form-control" id="status" aria-label="Default select example">
+                                        <select class="form-select form-control" id="status" name="status" aria-label="Default select example">
                                             <option selected>Pilih Status</option>
                                             <option value="Outsourcing" <?= ($status == 'Outsourcing') ? 'selected' : '' ?> >Outsourcing</option>
                                             <option value="Kontrak" <?= ($status == 'Kontrak') ? 'selected' : '' ?> >Kontrak</option>
