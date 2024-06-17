@@ -36,6 +36,13 @@ class KaryawanController {
     }
     // END Tambah Karyawan 
 
+
+    // Hapus Karyawan
+    public function hapusKaryawan($nik) {
+        
+    }
+    // END Hapus Karyawan
+
 }
 
 $karyawanController = new KaryawanController();
@@ -55,4 +62,14 @@ if(isset($_POST['tambahKaryawan'])) {
     $karyawanController->tambahKaryawan($nik, $nama, $tempatLahir, $tanggalLahir, $alamat, $noTelepon, $jabatan, $status);
 }
 // END Tambah Karyawan
+
+
+// Hapus Karyawan
+if (isset($_GET['nik'])) {
+    $nik = $_GET['nik'];
+
+    // Memanggil function hapusKaryawan
+    $karyawanController->hapusKaryawan($nik);
+}
+// END Hapus Karyawan
 ?>
