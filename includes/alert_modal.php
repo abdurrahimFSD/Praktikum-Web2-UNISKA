@@ -42,3 +42,48 @@
     }
 ?>
 <!-- END doneTambahKaryawan -->
+
+
+<!-- doneDeleteKaryawan -->
+<?php
+    if(isset($_SESSION['doneDeleteKaryawan'])) {
+?>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "This data has been deleted.",
+                    icon: "success"
+                });
+            });
+        </script>
+<?php
+        unset($_SESSION['doneDeleteKaryawan']);
+    }
+?>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const deleteButtons = document.querySelectorAll('.delete');
+
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+            const href = button.getAttribute('href');
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = href;
+                }
+            });
+        });
+    });
+});
+</script>
+<!-- END doneDeleteKaryawan -->
