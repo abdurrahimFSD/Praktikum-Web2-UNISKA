@@ -71,7 +71,7 @@
                                                 <a href="./karyawan_edit.php?nik=<?= $kolomData['nik']; ?>" title="Update Data">
                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                 </a>
-                                                <a href="" title="Delete Data">
+                                                <a href="../controllers/karyawan_controller.php?nik=<?= $kolomData['nik']; ?>" class="delete" title="Delete Data">
                                                     <i class="fa-solid fa-trash-can"></i>
                                                 </a>
                                             </td>
