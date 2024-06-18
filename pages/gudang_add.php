@@ -34,7 +34,38 @@
                             <h6 class="m-0 font-weight-bold text-primary">Detail Gudang</h6>
                         </div>
                         <div class="card-body">
-
+                            <form action="" method="post">
+                                <div class="mb-3 row">
+                                    <label for="namaGudang" class="col-sm-2 col-form-label">Nama Gudang</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="namaGudang" name="namaGudang" placeholder="Masukkan Nama Gudang" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="lokasiGudang" class="col-sm-2 col-form-label">Lokasi Gudang</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="lokasiGudang" name="lokasiGudang" placeholder="Masukkan Lokasi Gudang" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="luasGudang" class="col-sm-2 col-form-label">Luas Gudang</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="luasGudang" name="luasGudang" placeholder="Masukkan Luas Gudang" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label class="col-sm-2 col-form-label">&nbsp;</label>
+                                    <div class="col-sm-10">
+                                        <button type="submit" class="btn btn-primary" name="tambahGudang">
+                                            Tambah Gudang
+                                        </button>
+                                        <button type="reset" class="btn btn-warning">
+                                            Reset
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                            </form>
                         </div>
                     </div>
                     <!-- End Form -->
