@@ -27,7 +27,7 @@
 
                 <!-- include alert_modal -->
                 <?php 
-                include '../includes/alert_modal.php';
+                include '../includes/alert_gudang.php';
                 ?>
                 <!-- END include alert_modal -->
 
