@@ -44,6 +44,21 @@
                 </div>
             </li>
 
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProsesData"
+                    aria-expanded="true" aria-controls="collapseProsesData">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Proses Data</span>
+                </a>
+                <div id="collapseProsesData" class="collapse" aria-labelledby="headingComponents" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Proses Data:</h6>
+                        <a class="collapse-item" href="">Distribusi Karyawan</a>
+                    </div>
+                </div>
+            </li>
+
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
