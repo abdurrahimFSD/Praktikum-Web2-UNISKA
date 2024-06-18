@@ -35,6 +35,24 @@ class GudangController {
         }
     }
     // END Tambah Gudang
+
+
+    // Hapus Gudang
+    public function hapusGudang($idGudang) {
+        global $connection;
+
+        // Query untuk menghapus dataGudang berdasarkan id_gudang
+        $queryDeleteGudang = "DELETE FROM gudang WHERE id_gudang = '$idGudang'";
+        $resultDeleteGudang = mysqli_query($connection, $queryDeleteGudang);
+
+        // Cek apakah query berhasil di jalankan
+        if($resultDeleteGudang) {
+            $_SESSION['doneDeleteGudang'] = true;
+            header("location: ../pages/gudang_data.php");
+            exit;
+        }
+    }
+    // END Hapus Gudang
 }
 
 $gudangController = new GudangController();
@@ -51,4 +69,14 @@ if(isset($_POST['tambahGudang'])) {
     $gudangController->tambahGudang($idGudang, $namaGudang, $lokasiGudang, $luasGudang);
 }
 // END Tambah Gudang
+
+
+// Hapus Gudang
+if(isset($_GET['id_gudang'])) {
+    $idGudang = $_GET['id_gudang'];
+
+    // Memanggil function hapusGudang
+    $gudangController->hapusGudang($idGudang);
+}
+// END Hapus Gudang
 ?>
