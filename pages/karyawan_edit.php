@@ -67,37 +67,38 @@
                                 <div class="mb-3 row">
                                     <label for="nik" class="col-sm-2 col-form-label">NIK</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" maxlength="16" value="<?= $nik; ?>" required readonly>
+                                        <!-- Menambahkan isset($nik) untuk memeriksa apakah variabel $nik sudah di-set sebelumnya.  -->
+                                        <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" maxlength="16" value="<?= isset($nik) ? $nik : ''; ?>" required readonly>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" value="<?= $nama; ?>" required>
+                                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" value="<?= isset($nama) ? $nama : ''; ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="tempatLahir" class="col-sm-2 col-form-label">Tempat Lahir</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="tempatLahir" name="tempatLahir" placeholder="Masukkan Tempat Lahir" value="<?= $tempatLahir; ?>" required>
+                                        <input type="text" class="form-control" id="tempatLahir" name="tempatLahir" placeholder="Masukkan Tempat Lahir" value="<?= isset($tempatLahir) ? $tempatLahir : ''; ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="tanggalLahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                                     <div class="col-sm-10">
-                                        <input type="date" class="form-control" id="tanggalLahir" name="tanggalLahir" placeholder="Masukkan Tanggal Lahir" value="<?= $tanggalLahir; ?>" required>
+                                        <input type="date" class="form-control" id="tanggalLahir" name="tanggalLahir" placeholder="Masukkan Tanggal Lahir" value="<?= isset($tanggalLahir) ? $tanggalLahir : ''; ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat"><?= $alamat; ?></textarea>
+                                        <textarea class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat"><?= isset($alamat) ? $alamat : ''; ?></textarea>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="noTelepon" class="col-sm-2 col-form-label">No Telepon</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="noTelepon" name="noTelepon" placeholder="Masukkan No Telepon" maxlength="13" value="<?= $noTelepon; ?>" required>
+                                        <input type="text" class="form-control" id="noTelepon" name="noTelepon" placeholder="Masukkan No Telepon" maxlength="13" value="<?= isset($noTelepon) ? $noTelepon : ''; ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
