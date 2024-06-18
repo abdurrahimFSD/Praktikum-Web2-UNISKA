@@ -68,7 +68,7 @@ class KaryawanController {
         if($resultEditKaryawan) {
             // Buat session doneEditKaryawan
             $_SESSION['doneEditKaryawan'] = true;
-            header("location: ../pages/karyawan_add.php");
+            header("location: ../pages/karyawan_edit.php");
             exit;
         }
     }
