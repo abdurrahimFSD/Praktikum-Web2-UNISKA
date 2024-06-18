@@ -54,6 +54,13 @@ class GudangController {
     }
     // END Hapus Gudang
 
+
+    // Edit Gudang
+    public function editGudang($idGudang, $namaGudang, $lokasiGudang, $luasGudang) {
+
+    }
+    // END Edit Gudang
+
 }
 
 $gudangController = new GudangController();
@@ -80,4 +87,17 @@ if(isset($_GET['id_gudang'])) {
     $gudangController->hapusGudang($idGudang);
 }
 // END Hapus Gudang
+
+
+// Edit Gudang
+if(isset($_POST['editGudang'])) {
+    $idGudang = $_POST['idGudang'];
+    $namaGudang = $_POST['namaGudang'];
+    $lokasiGudang = $_POST['lokasiGudang'];
+    $luasGudang = $_POST['luasGudang'];
+
+    // Memanggil function editGudang dengan data dari form
+    $gudangController->editGudang($idGudang, $namaGudang, $lokasiGudang, $luasGudang);
+}
+// END Edit Gudang
 ?>
