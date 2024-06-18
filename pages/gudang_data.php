@@ -52,7 +52,7 @@
                                             <td><?= $no++; ?></td>
                                             <td><?= $kolomData['nama_gudang']; ?></td>
                                             <td><?= $kolomData['lokasi_gudang']; ?></td>
-                                            <td><?= $kolomData['luas_gudang']; ?></td>
+                                            <td><?= $kolomData['luas_gudang']; ?>m<sup>2</sup></td>
                                             <td class="d-flex justify-content-around">
                                                 <a href="./gudang_edit.php" title="Update Data">
                                                     <i class="fa-solid fa-pen-to-square"></i>
