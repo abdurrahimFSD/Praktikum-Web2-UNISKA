@@ -26,6 +26,10 @@
                 </div>
 
                 <?php
+                include '../includes/alert_modal.php';
+                ?>
+
+                <?php
                 // Update
                 if(isset($_GET['nik'])) {
                     global $connection;
