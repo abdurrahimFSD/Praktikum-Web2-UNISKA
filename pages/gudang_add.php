@@ -25,6 +25,12 @@
                     </div>
                 </div>
 
+                <!-- include alert_modal -->
+                <?php 
+                include '../includes/alert_modal.php';
+                ?>
+                <!-- END include alert_modal -->
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
