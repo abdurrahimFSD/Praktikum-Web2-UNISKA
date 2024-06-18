@@ -25,6 +25,12 @@
                     </div>
                 </div>
 
+                <!-- include alert_gudang -->
+                <?php 
+                include '../includes/alert_gudang.php';
+                ?>
+                <!-- END include alert_gudang -->
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
