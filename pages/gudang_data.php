@@ -25,11 +25,11 @@
                     </div>
                 </div>
 
-                <!-- include alert_gudang -->
+                <!-- include alert_gudang.php -->
                 <?php 
                 include '../includes/alert_gudang.php';
                 ?>
-                <!-- END include alert_gudang -->
+                <!-- END include alert_gudang.php -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
