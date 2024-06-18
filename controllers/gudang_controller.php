@@ -57,7 +57,19 @@ class GudangController {
 
     // Edit Gudang
     public function editGudang($idGudang, $namaGudang, $lokasiGudang, $luasGudang) {
+        global $connection;
 
+        // Query untuk mengedit data gudang berdasarkan id_gudang
+        $queryEditGudang = "UPDATE gudang SET nama_gudang='$namaGudang', lokasi_gudang='$lokasiGudang', luas_gudang='$luasGudang' WHERE id_gudang ='$idGudang'";
+        $resulttEditGudang = mysqli_query($connection, $queryEditGudang);
+
+        // Cek apakah query berhasil dijalankan
+        if($resulttEditGudang) {
+            // Buat session doneEditGudang
+            $_SESSION['doneEditGudang'] = true;
+            header("location : ../pages/gudang_add.php");
+            exit;
+        }
     }
     // END Edit Gudang
 
