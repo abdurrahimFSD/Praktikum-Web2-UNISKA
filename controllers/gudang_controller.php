@@ -78,7 +78,7 @@ class GudangController {
         if($resultEditGudang) {
             // Buat session doneEditGudang
             $_SESSION['doneEditGudang'] = true;
-            header("location : ../pages/gudang_edit.php");
+            header("location: ../pages/gudang_edit.php");
             exit;
         }
     }
