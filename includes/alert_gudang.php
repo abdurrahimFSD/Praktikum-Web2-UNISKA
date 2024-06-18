@@ -87,3 +87,25 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 <!-- END doneDeleteGudang -->
+
+
+<!-- doneEditGudang -->
+<?php
+    if(isset($_SESSION['doneEditGudang'])) {
+?>
+        <script>
+            Swal.fire({
+                title: "Success",
+                text: "Warehouse data updated successfully",
+                icon: "success"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '../pages/gudang_data.php';
+                }
+            });
+        </script>
+<?php
+        unset($_SESSION['doneEditGudang']);
+    }
+?>
+<!-- END doneEditGudang -->
