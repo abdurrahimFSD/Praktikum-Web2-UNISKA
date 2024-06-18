@@ -12,7 +12,7 @@
                             <div class="row align-items-center">
                                 <div class="col-12 col-sm-6">
                                     <h4 class="page-header-title mb-0 text-dark">
-                                        <i class="fa-solid fa-square-plus mr-2"></i> Tambah Data Gudang
+                                        <i class="fa-solid fa-square-plus mr-2"></i> Tambah Gudang
                                     </h4>
                                 </div>
                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0 d-flex justify-content-end">
@@ -28,7 +28,16 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
+                    <!-- Form -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Detail Gudang</h6>
+                        </div>
+                        <div class="card-body">
 
+                        </div>
+                    </div>
+                    <!-- End Form -->
 
                 </div>
                 <!-- End Page Content -->
