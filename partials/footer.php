@@ -31,12 +31,5 @@
     <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="../assets/js/demo/datatables.js"></script>
-    
-    <!-- Page level plugins -->
-    <script src="../vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="../assets/js/demo/chart-area.js"></script>
-    <script src="../assets/js/demo/chart-pie.js"></script>
 </body>
 </html>
