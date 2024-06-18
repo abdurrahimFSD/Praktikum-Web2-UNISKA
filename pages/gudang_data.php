@@ -48,7 +48,7 @@
                                             <td>Martapura</td>
                                             <td>200 m<sup>2</sup> </td>
                                             <td class="d-flex justify-content-around">
-                                                <a href="" title="Update Data">
+                                                <a href="./gudang_edit.php" title="Update Data">
                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                 </a>
                                                 <a href="" title="Delete Data">
