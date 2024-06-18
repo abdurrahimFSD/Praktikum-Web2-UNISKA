@@ -53,7 +53,7 @@ class GudangController {
         }
     }
     // END Hapus Gudang
-    
+
 }
 
 $gudangController = new GudangController();
