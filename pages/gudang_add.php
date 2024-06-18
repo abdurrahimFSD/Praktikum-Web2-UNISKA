@@ -34,7 +34,7 @@
                             <h6 class="m-0 font-weight-bold text-primary">Detail Gudang</h6>
                         </div>
                         <div class="card-body">
-                            <form action="" method="post">
+                            <form action="../controllers/gudang_controller.php" method="post">
                                 <input type="hidden" name="idGudang">
                                 
                                 <div class="mb-3 row">
