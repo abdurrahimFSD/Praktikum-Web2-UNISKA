@@ -25,6 +25,25 @@
                     </div>
                 </div>
 
+                <?php
+                if(isset($_GET['id_gudang'])) {
+                    global $connection;
+
+                    $idGudang = $_GET['id_gudang'];
+
+                    // Query select gudang berdasarkan id_gudang
+                    $querySelectGudang = "SELECT * FROM gudang WHERE id_gudang = '$idGudang'";
+                    $resultSelectGudang = mysqli_query($connection, $querySelectGudang);
+
+                    $kolomData = mysqli_fetch_assoc($resultSelectGudang);
+
+                    $idGudang = $kolomData['id_gudang'];
+                    $namaGudang = $kolomData['nama_gudang'];
+                    $lokasiGudang = $kolomData['lokasi_gudang'];
+                    $luasGudang = $kolomData['luas_gudang'];
+                }
+                ?>
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
