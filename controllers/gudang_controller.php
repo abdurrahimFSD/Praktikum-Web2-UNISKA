@@ -59,6 +59,17 @@ class GudangController {
     public function editGudang($idGudang, $namaGudang, $lokasiGudang, $luasGudang) {
         global $connection;
 
+        // Cek apakah Nama Gudang sudah ada
+        $queryCekNamaGudang = "SELECT * FROM gudang WHERE nama_gudang = '$namaGudang'";
+        $resultCekNamaGudang = mysqli_query($connection, $queryCekNamaGudang);
+
+        if(mysqli_num_rows($resultCekNamaGudang) > 0) {
+            // Jika Nama Gudang sudah ada maka redirect ke halaman gudang_add.php 
+            $_SESSION['namaGudangSudahAda'] = $namaGudang;
+            header("location: ../pages/gudang_add.php");
+            exit;
+        }
+
         // Query untuk mengedit data gudang berdasarkan id_gudang
         $queryEditGudang = "UPDATE gudang SET nama_gudang='$namaGudang', lokasi_gudang='$lokasiGudang', luas_gudang='$luasGudang' WHERE id_gudang ='$idGudang'";
         $resulttEditGudang = mysqli_query($connection, $queryEditGudang);
