@@ -66,7 +66,7 @@ class GudangController {
         if(mysqli_num_rows($resultCekNamaGudang) > 0) {
             // Jika Nama Gudang sudah ada maka redirect ke halaman gudang_add.php 
             $_SESSION['namaGudangSudahAda'] = $namaGudang;
-            header("location: ../pages/gudang_add.php");
+            header("location: ../pages/gudang_edit.php");
             exit;
         }
 
