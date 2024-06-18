@@ -28,7 +28,39 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                
+                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>NO</th>
+                                            <th>Nama Gudang</th>
+                                            <th>Lokasi Gudang</th>
+                                            <th>Luas Gudang </th>
+                                            <th>Tools</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Gudang Laptop</td>
+                                            <td>Martapura</td>
+                                            <td>200 m<sup>2</sup> </td>
+                                            <td class="d-flex justify-content-around">
+                                                <a href="" title="Update Data">
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                </a>
+                                                <a href="" title="Delete Data">
+                                                    <i class="fa-solid fa-trash-can"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- End Page Content -->
