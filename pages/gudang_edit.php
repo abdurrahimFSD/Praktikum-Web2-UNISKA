@@ -24,7 +24,11 @@
                         </div>
                     </div>
                 </div>
-
+                
+                <?php
+                include '../includes/alert_gudang.php'
+                ?>
+                
                 <?php
                 if(isset($_GET['id_gudang'])) {
                     global $connection;
