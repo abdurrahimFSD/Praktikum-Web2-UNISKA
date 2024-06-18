@@ -17,6 +17,7 @@ class KaryawanController {
         if(mysqli_num_rows($resultCekNik) > 0) {
             // Jika NIK sudah ada maka redirect ke halaman karyawan_add.php 
             $_SESSION['nikSudahAda'] = $nik;
+            $_SESSION['form_data'] = $_POST;
             header("location: ../pages/karyawan_add.php");
             exit;
         }
