@@ -42,11 +42,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php
+                                        $queryReadGudang = "SELECT * FROM gudang";
+                                        $resultReadGudang = mysqli_query($connection, $queryReadGudang);
+                                        $no = 1;
+                                        while($kolomData = mysqli_fetch_assoc($resultReadGudang)) {
+                                        ?>
                                         <tr>
-                                            <td>1</td>
-                                            <td>Gudang Laptop</td>
-                                            <td>Martapura</td>
-                                            <td>200 m<sup>2</sup> </td>
+                                            <td><?= $no++; ?></td>
+                                            <td><?= $kolomData['nama_gudang']; ?></td>
+                                            <td><?= $kolomData['lokasi_gudang']; ?></td>
+                                            <td><?= $kolomData['luas_gudang']; ?></td>
                                             <td class="d-flex justify-content-around">
                                                 <a href="./gudang_edit.php" title="Update Data">
                                                     <i class="fa-solid fa-pen-to-square"></i>
@@ -56,6 +62,9 @@
                                                 </a>
                                             </td>
                                         </tr>
+                                        <?php
+                                        }
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
