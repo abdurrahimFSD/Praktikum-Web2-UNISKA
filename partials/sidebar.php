@@ -39,7 +39,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Master Data:</h6>
                         <a class="collapse-item" href="../pages/karyawan_data.php">Data Karyawan</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                        <a class="collapse-item" href="../pages/gudang_data.php">Data Gudang</a>
                     </div>
                 </div>
             </li>
