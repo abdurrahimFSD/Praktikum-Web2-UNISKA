@@ -56,6 +56,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Laporan:</h6>
                         <a class="collapse-item" href="../pages/karyawan_cetak.php">Cetak Data Karyawan</a>
+                        <a class="collapse-item" href="../pages/gudang_cetak.php">Cetak Data Gudang</a>
                     </div>
                 </div>
             </li>
