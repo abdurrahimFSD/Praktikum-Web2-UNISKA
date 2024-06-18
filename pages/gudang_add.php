@@ -35,6 +35,8 @@
                         </div>
                         <div class="card-body">
                             <form action="" method="post">
+                                <input type="hidden" name="idGudang">
+                                
                                 <div class="mb-3 row">
                                     <label for="namaGudang" class="col-sm-2 col-form-label">Nama Gudang</label>
                                     <div class="col-sm-10">
