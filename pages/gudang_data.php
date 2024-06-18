@@ -57,7 +57,7 @@
                                                 <a href="./gudang_edit.php" title="Update Data">
                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                 </a>
-                                                <a href="" title="Delete Data">
+                                                <a href="../controllers/gudang_controller.php?id_gudang=<?= $kolomData['id_gudang']; ?>" class="delete-gudang" title="Delete Data">
                                                     <i class="fa-solid fa-trash-can"></i>
                                                 </a>
                                             </td>
