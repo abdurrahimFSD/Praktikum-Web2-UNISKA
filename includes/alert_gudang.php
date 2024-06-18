@@ -20,3 +20,25 @@
     }
 ?>
 <!-- END namaGudangSudahAda -->
+
+
+<!-- doneTambahGudang -->
+<?php
+    if(isset($_SESSION['doneTambahGudang'])) {
+?>
+        <script>
+            Swal.fire({
+                title: "Success",
+                text: "Warehouse data added successfully",
+                icon: "success"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '../pages/gudang_data.php';
+                }
+            });
+        </script>
+<?php
+        unset($_SESSION['doneTambahGudang']);
+    }
+?>
+<!-- END doneTambahGudang -->
