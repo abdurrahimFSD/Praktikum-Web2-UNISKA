@@ -58,24 +58,24 @@
                         </div>
                         <div class="card-body">
                             <form action="../controllers/gudang_controller.php" method="post">
-                                <input type="hidden" name="idGudang" value="<?= $idGudang; ?>">
+                                <input type="hidden" name="idGudang" value="<?= isset($idGudang) ? $idGudang : ''; ?>">
                                 
                                 <div class="mb-3 row">
                                     <label for="namaGudang" class="col-sm-2 col-form-label">Nama Gudang</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="namaGudang" name="namaGudang" value="<?= $namaGudang; ?>" placeholder="Masukkan Nama Gudang" required>
+                                        <input type="text" class="form-control" id="namaGudang" name="namaGudang" value="<?= isset($namaGudang) ? $namaGudang : ''; ?>" placeholder="Masukkan Nama Gudang" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="lokasiGudang" class="col-sm-2 col-form-label">Lokasi Gudang</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="lokasiGudang" name="lokasiGudang" value="<?= $lokasiGudang; ?>" placeholder="Masukkan Lokasi Gudang" required>
+                                        <input type="text" class="form-control" id="lokasiGudang" name="lokasiGudang" value="<?= isset($lokasiGudang) ? $lokasiGudang : ''; ?>" placeholder="Masukkan Lokasi Gudang" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="luasGudang" class="col-sm-2 col-form-label">Luas Gudang</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="luasGudang" name="luasGudang" value="<?= $luasGudang; ?>" placeholder="Masukkan Luas Gudang" required>
+                                        <input type="text" class="form-control" id="luasGudang" name="luasGudang" value="<?= isset($luasGudang) ? $luasGudang : ''; ?>" placeholder="Masukkan Luas Gudang" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
