@@ -72,10 +72,10 @@ class GudangController {
 
         // Query untuk mengedit data gudang berdasarkan id_gudang
         $queryEditGudang = "UPDATE gudang SET nama_gudang='$namaGudang', lokasi_gudang='$lokasiGudang', luas_gudang='$luasGudang' WHERE id_gudang ='$idGudang'";
-        $resulttEditGudang = mysqli_query($connection, $queryEditGudang);
+        $resultEditGudang = mysqli_query($connection, $queryEditGudang);
 
         // Cek apakah query berhasil dijalankan
-        if($resulttEditGudang) {
+        if($resultEditGudang) {
             // Buat session doneEditGudang
             $_SESSION['doneEditGudang'] = true;
             header("location : ../pages/gudang_edit.php");
