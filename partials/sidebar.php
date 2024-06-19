@@ -63,7 +63,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLaporan"
                     aria-expanded="true" aria-controls="collapseLaporan">
-                    <i class="fa-solid fa-file-invoice"></i>
+                    <i class="fa-solid fa-folder-open"></i>
                     <span>Laporan</span>
                 </a>
                 <div id="collapseLaporan" class="collapse" aria-labelledby="headingUtilities"
