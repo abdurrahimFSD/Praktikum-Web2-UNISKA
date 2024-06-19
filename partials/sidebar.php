@@ -54,7 +54,7 @@
                 <div id="collapseProsesData" class="collapse" aria-labelledby="headingComponents" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Proses Data:</h6>
-                        <a class="collapse-item" href="">Distribusi Karyawan</a>
+                        <a class="collapse-item" href="../pages/distribusi_data.php">Distribusi Karyawan</a>
                     </div>
                 </div>
             </li>
