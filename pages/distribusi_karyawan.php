@@ -10,10 +10,15 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <div class="row align-items-center">
-                                <div class="col-12">
+                                <div class="col-12 col-sm-6">
                                     <h4 class="page-header-title mb-0 text-dark">
                                         <i class="fas fa-users-cog mr-2"></i> Pilih Karyawan Yang Akan Didistribusikan
                                     </h4>
+                                </div>
+                                <div class="col-12 col-sm-6 mt-3 mt-sm-0 d-flex justify-content-end">
+                                    <a class="btn btn-light text-primary" href="./distribusi_data.php">
+                                        <i class="fa-solid fa-arrow-left"></i> Kembali Ke Distribusi Data
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +47,51 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php
+                                    $query = "SELECT * FROM karyawan";
+                                    $sql = mysqli_query($connection, $query) or die ("Query salah : ".mysqli_error($connection));
+                                    $no = 1;
+                                    while ($kolomData = mysqli_fetch_array($sql) ) {
+                                    ?>
+                                        
+                                        <tr>
+                                            <td>
+                                                <?= $no++; ?>
+                                            </td>
+                                            <td>
+                                                <?= $kolomData['nik']; ?>
+                                            </td>
+                                            <td>
+                                                <?= $kolomData['nama']; ?>
+                                            </td>
+                                            <td>
+                                                <?= $kolomData['tempat_lahir']; ?>
+                                            </td>
+                                            <td>
+                                                <?= indonesiaTgl($kolomData['tanggal_lahir']); ?>
+                                            </td>
+                                            <td>
+                                                <?= $kolomData['alamat']; ?>
+                                            </td>
+                                            <td>
+                                                <?= $kolomData['no_telepon']; ?>
+                                            </td>
+                                            <td>
+                                                <?= $kolomData['jabatan']; ?>
+                                            </td>
+                                            <td>
+                                                <?= $kolomData['status']; ?>
+                                            </td>
+                                            <td class="d-flex justify-content-center">
+                                                <a href="./distribusi_add.php?nik=<?= $kolomData['nik']; ?>" class="btn btn-primary btn-sm">
+                                                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
 
+                                    <?php
+                                    }
+                                    ?>
                                     </tbody>
                                 </table>
                             </div>
