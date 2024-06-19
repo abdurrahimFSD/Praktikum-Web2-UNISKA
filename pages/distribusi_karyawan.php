@@ -83,7 +83,7 @@
                                                 <?= $kolomData['status']; ?>
                                             </td>
                                             <td class="d-flex justify-content-center">
-                                                <a href="./distribusi_add.php?nik=<?= $kolomData['nik']; ?>" class="btn btn-primary btn-sm">
+                                                <a href="./distribusi_add.php?nik=<?= $kolomData['nik']; ?>" class="btn btn-primary btn-sm" title="Distribusi">
                                                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
                                                 </a>
                                             </td>
