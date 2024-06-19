@@ -11,8 +11,10 @@
                 confirmButtonColor: '#dc3545',
                 confirmButtonText: "OK"
             }).then((result) => {
-                // Kembalikan fokus ke NIK
-                document.getElementById('namaGudang').focus();
+                // Kembalikan fokus ke NIK dan letakkan kursor di akhir angka
+                let namaGudangInput = document.getElementById('namaGudang');
+                namaGudangInput.focus();
+                namaGudangInput.setSelectionRange(namaGudangInput.value.length, namaGudangInput.value.length);
             });
         </script>
 <?php
