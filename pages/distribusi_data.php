@@ -28,59 +28,59 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                <div class="card shadow mb-4">
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>NO</th>
-                                        <th>Nama Gudang</th>
-                                        <th>Luas Gudang </th>
-                                        <th>Jumlah Karyawan</th>
-                                        <th>Tools</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                $query = "SELECT karyawan_gudang.*, gudang.nama_gudang, gudang.lokasi_gudang, gudang.luas_gudang, COUNT(karyawan_gudang.nik) AS jumlah_karyawan FROM karyawan_gudang
-                                LEFT JOIN gudang ON gudang.id_gudang=karyawan_gudang.id_gudang
-                                LEFT JOIN karyawan ON karyawan.nik=karyawan_gudang.nik
-                                GROUP BY gudang.id_gudang
-                                ORDER BY jumlah_karyawan DESC";
-                                $result = mysqli_query($connection, $query) or die ("Query salah : ".mysqli_error($connection));
-                                $no = 1;
-                                while ($kolomData = mysqli_fetch_array($result) ) {
-                                ?>
-                                    
-                                    <tr>
-                                        <td>
-                                            <?= $no++; ?>
-                                        </td>
-                                        <td>
-                                            <?= $kolomData['nama_gudang']; ?>
-                                        </td>
-                                        <td>
-                                            <?= $kolomData['luas_gudang']; ?>m<sup>2</sup>
-                                        </td>
-                                        <td>
-                                            <?= $kolomData['jumlah_karyawan']; ?>
-                                        </td>
-                                        <td class="d-flex justify-content-center">
-                                            <a href="./distribusi_detail.php?id=<?= $kolomData['id_gudang']; ?>" title="Detail Data" class="">
-                                                <i class="fas fa-search-plus fa-xl"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>NO</th>
+                                            <th>Nama Gudang</th>
+                                            <th>Luas Gudang </th>
+                                            <th>Jumlah Karyawan</th>
+                                            <th>Tools</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    $query = "SELECT karyawan_gudang.*, gudang.nama_gudang, gudang.lokasi_gudang, gudang.luas_gudang, COUNT(karyawan_gudang.nik) AS jumlah_karyawan FROM karyawan_gudang
+                                    LEFT JOIN gudang ON gudang.id_gudang=karyawan_gudang.id_gudang
+                                    LEFT JOIN karyawan ON karyawan.nik=karyawan_gudang.nik
+                                    GROUP BY gudang.id_gudang
+                                    ORDER BY jumlah_karyawan DESC";
+                                    $result = mysqli_query($connection, $query) or die ("Query salah : ".mysqli_error($connection));
+                                    $no = 1;
+                                    while ($kolomData = mysqli_fetch_array($result) ) {
+                                    ?>
+                                        
+                                        <tr>
+                                            <td>
+                                                <?= $no++; ?>
+                                            </td>
+                                            <td>
+                                                <?= $kolomData['nama_gudang']; ?>
+                                            </td>
+                                            <td>
+                                                <?= $kolomData['luas_gudang']; ?>m<sup>2</sup>
+                                            </td>
+                                            <td>
+                                                <?= $kolomData['jumlah_karyawan']; ?>
+                                            </td>
+                                            <td class="d-flex justify-content-center">
+                                                <a href="./distribusi_detail.php?id=<?= $kolomData['id_gudang']; ?>" title="Detail Data" class="">
+                                                    <i class="fas fa-search-plus fa-xl"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
 
-                                <?php
-                                }
-                                ?>
-                                </tbody>
-                            </table>
+                                    <?php
+                                    }
+                                    ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                 </div>
                 <!-- End Page Content -->
