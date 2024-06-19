@@ -16,7 +16,7 @@
                                     </h4>
                                 </div>
                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0 d-flex justify-content-end">
-                                    <a class="btn btn-light text-primary" href="">
+                                    <a class="btn btn-light text-primary" href="./distribusi_karyawan.php">
                                         <i class="fa-solid fa-square-plus"></i> Tambah Data
                                     </a>
                                 </div>
