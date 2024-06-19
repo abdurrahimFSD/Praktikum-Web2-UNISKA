@@ -30,12 +30,12 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseComponents"
-                    aria-expanded="true" aria-controls="collapseComponents">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMasterData"
+                    aria-expanded="true" aria-controls="collapseMasterData">
                     <i class="fa-solid fa-database"></i>
                     <span>Master Data</span>
                 </a>
-                <div id="collapseComponents" class="collapse" aria-labelledby="headingComponents" data-parent="#accordionSidebar">
+                <div id="collapseMasterData" class="collapse" aria-labelledby="headingComponents" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Master Data:</h6>
                         <a class="collapse-item" href="../pages/karyawan_data.php">Data Karyawan</a>
