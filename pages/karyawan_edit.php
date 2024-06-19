@@ -92,7 +92,7 @@
                                 <div class="mb-3 row">
                                     <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat"><?= isset($alamat) ? $alamat : ''; ?></textarea>
+                                        <textarea class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat" required><?= isset($alamat) ? $alamat : ''; ?></textarea>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
