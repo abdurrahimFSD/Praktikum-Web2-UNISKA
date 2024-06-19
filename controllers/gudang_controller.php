@@ -17,6 +17,8 @@ class GudangController {
         if(mysqli_num_rows($resultCekNamaGudang) > 0) {
             // Jika Nama Gudang sudah ada maka redirect ke halaman gudang_add.php 
             $_SESSION['namaGudangSudahAda'] = $namaGudang;
+            // Menambahkan penyimpanan data form ke session saat nama gudang sudah ada untuk mempertahankan input pengguna di halaman gudang_add.php
+            $_SESSION['form_data'] = $_POST;
             header("location: ../pages/gudang_add.php");
             exit;
         }
