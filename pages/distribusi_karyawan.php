@@ -23,6 +23,32 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
+                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>NO</th>
+                                            <th>NIK</th>
+                                            <th>Nama</th>
+                                            <th>Tempat Lahir</th>
+                                            <th>Tanggal Lahir</th>
+                                            <th>Alamat</th>
+                                            <th>No Telepon</th>
+                                            <th>Jabatan</th>
+                                            <th>Status</th>
+                                            <th>Tools</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                
                 </div>
                 <!-- End Page Content -->
             
