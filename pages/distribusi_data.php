@@ -28,6 +28,26 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
+                <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>NO</th>
+                                            <th>Nama Gudang</th>
+                                            <th>Luas Gudang </th>
+                                            <th>Jumlah Karyawan</th>
+                                            <th>Tools</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- End Page Content -->
