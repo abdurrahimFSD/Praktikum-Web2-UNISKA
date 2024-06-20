@@ -17,7 +17,22 @@ class KaryawanController {
         if(mysqli_num_rows($resultCekNik) > 0) {
             // Jika NIK sudah ada maka redirect ke halaman karyawan_add.php 
             $_SESSION['nikSudahAda'] = $nik;
+
+            // Menambahkan penyimpanan data form ke dalam session (menggunakan $_POST atau array asosiatif) saat NIK sudah ada pada tambahKaryawan
+            // Cara 1
             $_SESSION['form_data'] = $_POST;
+            // Cara 2
+            // $_SESSION['form_data'] = [
+            //     'nik' => $nik,
+            //     'nama' => $nama,
+            //     'tempatLahir' => $tempatLahir,
+            //     'tanggalLahir' => $tanggalLahir,
+            //     'alamat' => $alamat,
+            //     'noTelepon' => $noTelepon,
+            //     'jabatan' => $jabatan,
+            //     'status' => $status
+            // ];
+            
             header("location: ../pages/karyawan_add.php");
             exit;
         }
