@@ -31,6 +31,16 @@
                 ?>
                 <!-- END include alert_modal -->
 
+                <!-- Helper functions for form data handling -->
+                <!-- ATAU mengambil nilai dari session -->
+                <?php
+                function getSessionValue($key, $default = '') {
+                    return isset($_SESSION['form_data'][$key]) ? $_SESSION['form_data'][$key] : $default;
+                }
+                ?>
+                <!-- END Helper functions for form data handling -->
+                <!-- END ATAU mengambil nilai dari session -->
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -46,19 +56,19 @@
                                 <div class="mb-3 row">
                                     <label for="namaGudang" class="col-sm-2 col-form-label">Nama Gudang</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="namaGudang" name="namaGudang" placeholder="Masukkan Nama Gudang" value="<?= isset($_SESSION['form_data']['namaGudang']) ? $_SESSION['form_data']['namaGudang'] : ''; ?>" required>
+                                        <input type="text" class="form-control" id="namaGudang" name="namaGudang" placeholder="Masukkan Nama Gudang" value="<?= getSessionValue('namaGudang') ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="lokasiGudang" class="col-sm-2 col-form-label">Lokasi Gudang</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="lokasiGudang" name="lokasiGudang" placeholder="Masukkan Lokasi Gudang" value="<?= isset($_SESSION['form_data']['lokasiGudang']) ? $_SESSION['form_data']['lokasiGudang'] : ''; ?>" required>
+                                        <input type="text" class="form-control" id="lokasiGudang" name="lokasiGudang" placeholder="Masukkan Lokasi Gudang" value="<?= getSessionValue('lokasiGudang'); ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="luasGudang" class="col-sm-2 col-form-label">Luas Gudang</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="luasGudang" name="luasGudang" placeholder="Masukkan Luas Gudang" value="<?= isset($_SESSION['form_data']['luasGudang']) ? $_SESSION['form_data']['luasGudang'] : ''; ?>" required>
+                                        <input type="text" class="form-control" id="luasGudang" name="luasGudang" placeholder="Masukkan Luas Gudang" value="<?= getSessionValue('luasGudang'); ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
