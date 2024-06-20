@@ -30,6 +30,20 @@
                 include '../includes/alert_modal.php';
                 ?>
                 <!-- END include alert_modal -->
+
+                <!-- Helper functions for form data handling -->
+                <!-- ATAU mengambil nilai dari session & menentukan apakah suatu nilai dipilih di dalam dropdown. -->
+                <?php
+                function getSessionValue($key, $default = '') {
+                    return isset($_SESSION['form_data'][$key]) ? $_SESSION['form_data'][$key] : $default;
+                }
+
+                function isSelected($key, $value) {
+                    return (isset($_SESSION['form_data'][$key]) && $_SESSION['form_data'][$key] == $value) ? 'selected' : '';
+                }
+                ?>
+                <!-- END Helper functions for form data handling -->
+                <!-- END ATAU mengambil nilai dari session & menentukan apakah suatu nilai dipilih di dalam dropdown. -->
                 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -44,53 +58,48 @@
                                 <div class="mb-3 row">
                                     <label for="nik" class="col-sm-2 col-form-label">NIK</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" maxlength="16" value="<?= isset($_SESSION['form_data']['nik']) ? $_SESSION['form_data']['nik'] : ''; ?>" required>
+                                        <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK" maxlength="16" value="<?= getSessionValue('nik'); ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" value="<?= isset($_SESSION['form_data']['nama']) ? $_SESSION['form_data']['nama'] : ''; ?>" required>
+                                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" value="<?= getSessionValue('nama'); ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="tempatLahir" class="col-sm-2 col-form-label">Tempat Lahir</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="tempatLahir" name="tempatLahir" placeholder="Masukkan Tempat Lahir" value="<?= isset($_SESSION['form_data']['tempatLahir']) ? $_SESSION['form_data']['tempatLahir'] : ''; ?>" required>
+                                        <input type="text" class="form-control" id="tempatLahir" name="tempatLahir" placeholder="Masukkan Tempat Lahir" value="<?= getSessionValue('tempatLahir'); ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="tanggalLahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                                     <div class="col-sm-10">
-                                        <input type="date" class="form-control" id="tanggalLahir" name="tanggalLahir" placeholder="Masukkan Tanggal Lahir" min="<?= $minYear; ?>" max="<?= $maxYear; ?>" value="<?= isset($_SESSION['form_data']['tanggalLahir']) ? $_SESSION['form_data']['tanggalLahir'] : ''; ?>" required>
+                                        <input type="date" class="form-control" id="tanggalLahir" name="tanggalLahir" placeholder="Masukkan Tanggal Lahir" min="<?= $minYear; ?>" max="<?= $maxYear; ?>" value="<?= getSessionValue('tanggalLahir'); ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
                                     <div class="col-sm-10">
-                                        <textarea class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat" required><?= isset($_SESSION['form_data']['alamat']) ? $_SESSION['form_data']['alamat'] : ''; ?></textarea>
+                                        <textarea class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat" required><?= getSessionValue('alamat'); ?></textarea>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="noTelepon" class="col-sm-2 col-form-label">No Telepon</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="noTelepon" name="noTelepon" placeholder="Masukkan No Telepon" maxlength="13" value="<?= isset($_SESSION['form_data']['noTelepon']) ? $_SESSION['form_data']['noTelepon'] : ''; ?>" required>
+                                        <input type="text" class="form-control" id="noTelepon" name="noTelepon" placeholder="Masukkan No Telepon" maxlength="13" value="<?= getSessionValue('noTelepon'); ?>" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
                                     <div class="col-sm-10">
                                         <select class="form-select form-control" id="jabatan" name="jabatan" aria-label="Default select example" required>
-                                            <!-- <option selected>Pilih Jabatan</option>
-                                            <option value="Operator">Operator</option>
-                                            <option value="Leader">Leader</option>
-                                            <option value="Supervisor">Supervisor</option>
-                                            <option value="Manage">Manager</option> -->
-                                            <option value="" disabled <?= !isset($_SESSION['form_data']['jabatan']) ? 'selected' : ''; ?> >Pilih Jabatan</option>
-                                            <option value="Operator" <?= (isset($_SESSION['form_data']['jabatan']) && $_SESSION['form_data']['jabatan'] == 'Operator') ? 'selected' : ''; ?> >Operator</option>
-                                            <option value="Leader" <?= (isset($_SESSION['form_data']['jabatan']) && $_SESSION['form_data']['jabatan'] == 'Leader') ? 'selected' : ''; ?> >Leader</option>
-                                            <option value="Supervisor" <?= (isset($_SESSION['form_data']['jabatan']) && $_SESSION['form_data']['jabatan'] == 'Supervisor') ? 'selected' : ''; ?> >Supervisor</option>
-                                            <option value="Manager" <?= (isset($_SESSION['form_data']['jabatan']) && $_SESSION['form_data']['jabatan'] == 'Manager') ? 'selected' : ''; ?> >Manager</option>
+                                            <option value="" disabled <?= getSessionValue('jabatan') == '' ? 'selected' : ''; ?>>Pilih Jabatan</option>
+                                            <option value="Operator" <?= isSelected('jabatan', 'Operator'); ?>>Operator</option>
+                                            <option value="Leader" <?= isSelected('jabatan', 'Leader'); ?>>Leader</option>
+                                            <option value="Supervisor" <?= isSelected('jabatan', 'Supervisor'); ?>>Supervisor</option>
+                                            <option value="Manager" <?= isSelected('jabatan', 'Manager'); ?>>Manager</option>
                                         </select>
                                     </div>
                                 </div>
@@ -98,14 +107,10 @@
                                     <label for="status" class="col-sm-2 col-form-label">Status</label>
                                     <div class="col-sm-10">
                                         <select class="form-select form-control" id="status" name="status" aria-label="Default select example" required>
-                                            <!-- <option selected>Pilih Status</option>
-                                            <option value="Outsourcing">Outsourcing</option>
-                                            <option value="Kontrak">Kontrak</option>
-                                            <option value="Tetap">Tetap</option> -->
-                                            <option value="" disabled <?= !isset($_SESSION['form_data']['status']) ? 'selected' : ''; ?> >Pilih Status</option>
-                                            <option value="Outsourcing" <?= (isset($_SESSION['form_data']['status']) && $_SESSION['form_data']['status'] == 'Outsourcing') ? 'selected' : ''; ?> >Outsourcing</option>
-                                            <option value="Kontrak" <?= (isset($_SESSION['form_data']['status']) && $_SESSION['form_data']['status'] == 'Kontrak') ? 'selected' : ''; ?> >Kontrak</option>
-                                            <option value="Tetap" <?= (isset($_SESSION['form_data']['status']) && $_SESSION['form_data']['status'] == 'Tetap') ? 'selected' : ''; ?> >Tetap</option>
+                                            <option value="" disabled <?= getSessionValue('status') == '' ? 'selected' : ''; ?>>Pilih Status</option>
+                                            <option value="Outsourcing" <?= isSelected('status', 'Outsourcing'); ?>>Outsourcing</option>
+                                            <option value="Kontrak" <?= isSelected('status', 'Kontrak'); ?>>Kontrak</option>
+                                            <option value="Tetap" <?= isSelected('status', 'Tetap'); ?>>Tetap</option>
                                         </select>
                                     </div>
                                 </div>
