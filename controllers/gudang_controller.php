@@ -61,8 +61,8 @@ class GudangController {
     public function editGudang($idGudang, $namaGudang, $lokasiGudang, $luasGudang) {
         global $connection;
 
-        // Cek apakah Nama Gudang sudah ada
-        $queryCekNamaGudang = "SELECT * FROM gudang WHERE nama_gudang = '$namaGudang'";
+        // Cek apakah Nama Gudang sudah ada, kecuali untuk nama gudang yang sedang diedit
+        $queryCekNamaGudang = "SELECT * FROM gudang WHERE nama_gudang = '$namaGudang' AND id_gudang != '$idGudang'";
         $resultCekNamaGudang = mysqli_query($connection, $queryCekNamaGudang);
 
         if(mysqli_num_rows($resultCekNamaGudang) > 0) {
