@@ -48,6 +48,12 @@
                 }
                 ?>
 
+                <?php
+                function getValue($field, $default = '') {
+                    return isset($_SESSION['form_data'][$field]) ? $_SESSION['form_data'][$field] : (isset($GLOBALS[$field]) ? $GLOBALS[$field] : $default);
+                }
+                ?>
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -63,19 +69,19 @@
                                 <div class="mb-3 row">
                                     <label for="namaGudang" class="col-sm-2 col-form-label">Nama Gudang</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="namaGudang" name="namaGudang" value="<?= isset($_SESSION['form_data']['namaGudang']) ? $_SESSION['form_data']['namaGudang'] : (isset($namaGudang) ? $namaGudang : ''); ?>" placeholder="Masukkan Nama Gudang" required>
+                                        <input type="text" class="form-control" id="namaGudang" name="namaGudang" value="<?= getValue('namaGudang'); ?>" placeholder="Masukkan Nama Gudang" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="lokasiGudang" class="col-sm-2 col-form-label">Lokasi Gudang</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="lokasiGudang" name="lokasiGudang" value="<?= isset($_SESSION['form_data']['lokasiGudang']) ? $_SESSION['form_data']['lokasiGudang'] : (isset($lokasiGudang) ? $lokasiGudang : ''); ?>" placeholder="Masukkan Lokasi Gudang" required>
+                                        <input type="text" class="form-control" id="lokasiGudang" name="lokasiGudang" value="<?= getValue('lokasiGudang'); ?>" placeholder="Masukkan Lokasi Gudang" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
                                     <label for="luasGudang" class="col-sm-2 col-form-label">Luas Gudang</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="luasGudang" name="luasGudang" value="<?= isset($_SESSION['form_data']['luasGudang']) ? $_SESSION['form_data']['luasGudang'] : (isset($luasGudang) ? $luasGudang : ''); ?>" placeholder="Masukkan Luas Gudang" required>
+                                        <input type="text" class="form-control" id="luasGudang" name="luasGudang" value="<?= getValue('luasGudang'); ?>" placeholder="Masukkan Luas Gudang" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
