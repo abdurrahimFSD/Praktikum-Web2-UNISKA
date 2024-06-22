@@ -26,6 +26,7 @@
                 </div>
 
                 <?php include('../controllers/distribusi_controller.php'); ?>
+                <?php include('../includes/alert_distribusi.php');?>
                 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -36,7 +37,7 @@
                             <h6 class="m-0 font-weight-bold text-primary">Detail Gudang</h6>
                         </div>
                         <div class="card-body">
-                            <form action="../controllers/distribusi_controller.php" method="post">
+                            <form action="" method="post">
                                 <div class="mb-3 row">
                                     <label for="nik" class="col-sm-2 col-form-label">NIK</label>
                                     <div class="col-sm-10">
@@ -45,8 +46,8 @@
                                 </div>
                                 <div class="mb-3 row">
                                     <?php
-                                    $queryKaryawan = "SELECT karyawan.* FROM karyawan WHERE nik=$nik";
-                                    $resultKaryawan = mysqli_query($connection, $queryKaryawan) or die("Gagal Query sub karyawan ".mysqli_error($connection));
+                                    $queryKaryawan = "SELECT karyawan.* FROM karyawan WHERE nik= '$nik'";
+                                    $resultKaryawan = mysqli_query($connection, $queryKaryawan);
                                     $dataKaryawan = mysqli_fetch_assoc($resultKaryawan);
                                     ?>
                                     <label for="nama" class="col-sm-2 col-form-label">Nama</label>
