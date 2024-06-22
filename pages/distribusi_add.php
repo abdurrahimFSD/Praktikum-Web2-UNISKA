@@ -24,10 +24,66 @@
                         </div>
                     </div>
                 </div>
+
+                <?php include('../controllers/distribusi_controller.php'); ?>
                 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
+                    <!-- Form -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Detail Gudang</h6>
+                        </div>
+                        <div class="card-body">
+                            <form action="../controllers/distribusi_controller.php" method="post">
+                                <div class="mb-3 row">
+                                    <label for="nik" class="col-sm-2 col-form-label">NIK</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="nik" name="nik" value="<?= $nik; ?>" required readonly>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <?php
+                                    $queryKaryawan = "SELECT karyawan.* FROM karyawan WHERE nik=$nik";
+                                    $resultKaryawan = mysqli_query($connection, $queryKaryawan) or die("Gagal Query sub karyawan ".mysqli_error($connection));
+                                    $dataKaryawan = mysqli_fetch_assoc($resultKaryawan);
+                                    ?>
+                                    <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="nama" name="nama" value="<?= $dataKaryawan['nama']; ?>" required readonly>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="idGudang" class="col-sm-2 col-form-label">Pilih Gudang</label>
+                                    <div class="col-sm-10">
+                                    <select name="idGudang" id="idGudang" class="form-control">
+                                        <?php
+                                        $queryGudang = "SELECT gudang.* FROM gudang";
+                                        $resultGudang = mysqli_query($connection, $queryGudang);
+                                        while ($list = mysqli_fetch_array($resultGudang)) {
+                                            echo "<option value='{$list['id_gudang']}'> {$list['nama_gudang']} </option>";
+                                        }
+                                        ?>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label class="col-sm-2 col-form-label">&nbsp;</label>
+                                    <div class="col-sm-10">
+                                        <button type="submit" class="btn btn-primary" name="tambahDistribusi">
+                                            Tambah Distribusi
+                                        </button>
+                                        <button type="reset" class="btn btn-warning">
+                                            Reset
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                    <!-- End Form -->
 
                 </div>
                 <!-- End Page Content -->
