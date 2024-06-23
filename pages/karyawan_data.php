@@ -68,10 +68,10 @@
                                             <td><?= $kolomData['jabatan']; ?></td>
                                             <td><?= $kolomData['status']; ?></td>
                                             <td class="d-flex justify-content-around">
-                                                <a href="./karyawan_edit.php?nik=<?= $kolomData['nik']; ?>" title="Update Data">
+                                                <a href="./karyawan_edit.php?nik=<?= $kolomData['nik']; ?>" class="btn btn-light text-primary mr-2" title="Update Data">
                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                 </a>
-                                                <a href="../controllers/karyawan_controller.php?nik=<?= $kolomData['nik']; ?>" class="delete" title="Delete Data">
+                                                <a href="../controllers/karyawan_controller.php?nik=<?= $kolomData['nik']; ?>" class="delete btn btn-light text-primary" title="Delete Data">
                                                     <i class="fa-solid fa-trash-can"></i>
                                                 </a>
                                             </td>
