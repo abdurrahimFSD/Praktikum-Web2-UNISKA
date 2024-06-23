@@ -73,7 +73,7 @@
                                                 <?= $kolomData['jumlah_karyawan']; ?>
                                             </td>
                                             <td class="d-flex justify-content-center">
-                                                <a href="./distribusi_detail.php?id=<?= $kolomData['id_gudang']; ?>" title="Detail Data" class="">
+                                                <a href="./distribusi_detail.php?id=<?= $kolomData['id_gudang']; ?>" title="Detail Data" class="btn btn-light text-primary">
                                                     <i class="fas fa-search-plus fa-xl"></i>
                                                 </a>
                                             </td>
